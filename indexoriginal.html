@@ -20,11 +20,7 @@
   </style>
 </head>
 <body>
-<canvas id="button1" height="25" width="25" style="position: relative; top: 400px; left: 500px"></canvas>
-
-
-
-  <canvas width="600" height="600" id="game"></canvas>
+<canvas width="400" height="400" id="game"></canvas>
 <script>
 var canvas = document.getElementById('game');
 var context = canvas.getContext('2d');
@@ -163,38 +159,6 @@ document.addEventListener('keydown', function(e) {
     snake.dy = grid;
     snake.dx = 0;
   }
-
-// listen to keyboard events to move the snake
-
-// document.addEventListener('touchstart', function(ex) {
-
-  // prevent snake from backtracking on itself by checking that it's 
-  // not already moving on the same axis (pressing left while moving
-  // left won't do anything, and pressing right while moving left
-  // shouldn't let you collide with your own body)
-  
-  // // left arrow key
-  // if (ex.which === 37 && snake.dx === 0) {
-  //   snake.dx = -grid;
-  //   snake.dy = 0;
-  // }
-  // // up arrow key
-  // else if (ex.which === 38 && snake.dy === 0) {
-  //   snake.dy = -grid;
-  //   snake.dx = 0;
-  // }
-  // // right arrow key
-  // else if (ex.which === 39 && snake.dx === 0) {
-  //   snake.dx = grid;
-  //   snake.dy = 0;
-  // }
-  // // down arrow key
-  // else if (ex.which === 40 && snake.dy === 0) {
-  //   snake.dy = grid;
-  //   snake.dx = 0;
-  // }
-
-
 });
 
 // start the game
