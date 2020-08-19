@@ -20,11 +20,15 @@
   </style>
 </head>
 <body>
-<canvas id="button1" height="25" width="25" style="position: relative; top: 400px; left: 500px"></canvas>
+<canvas onclick="upTest()" id="upButton" height="25" width="25" style="position: relative; top: 400px; left: 500px"></canvas>
 
+<script>function upTest() {
+  if (snake.dy === 0)
+    snake.dy = -grid;
+    snake.dx = 0;}
+  </script>
 
-
-  <canvas width="600" height="600" id="game"></canvas>
+  <canvas width="400" height="400" id="game"></canvas>
 <script>
 var canvas = document.getElementById('game');
 var context = canvas.getContext('2d');
