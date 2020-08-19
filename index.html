@@ -20,12 +20,55 @@
   </style>
 </head>
 <body>
-<canvas onclick="upTest()" id="upButton" height="25" width="25" style="position: relative; top: 400px; left: 500px"></canvas>
+<canvas onclick="leftF()" id="leftButton" height="50" width="50" style="position: relative; top: 370px; left: 319px"></canvas>
+<canvas onclick="upF()" id="upButton" height="50" width="50" style="position: relative; top: 300px; left: 335px"></canvas>
+<canvas onclick="rightF()" id="rightButton" height="50" width="50" style="position: relative; top: 370px; left: 350px"></canvas>
+<canvas onclick="downF()" id="downButton" height="50" width="50" style="position: relative; top: 370px; left: 231px"></canvas>
+<script>
+  function leftF() {
+    if (snake.dx === 0)
+      snake.dx = -grid;
+      snake.dy = 0;}
 
-<script>function upTest() {
-  if (snake.dy === 0)
-    snake.dy = -grid;
-    snake.dx = 0;}
+  function upF() {
+    if (snake.dy === 0)
+      snake.dy = -grid;
+      snake.dx = 0;}
+
+   function rightF() {
+    if (snake.dx === 0)
+      snake.dx = grid;
+      snake.dy = 0;}
+
+   function downF() {
+    if (snake.dy === 0)
+      snake.dy = grid;
+      snake.dx = 0;}
+
+
+
+
+
+ // // left arrow key
+  // if (ex.which === 37 && snake.dx === 0) {
+  //   snake.dx = -grid;
+  //   snake.dy = 0;
+  // }
+  // // up arrow key
+  // else if (ex.which === 38 && snake.dy === 0) {
+  //   snake.dy = -grid;
+  //   snake.dx = 0;
+  // }
+  // // right arrow key
+  // else if (ex.which === 39 && snake.dx === 0) {
+  //   snake.dx = grid;
+  //   snake.dy = 0;
+  // }
+  // // down arrow key
+  // else if (ex.which === 40 && snake.dy === 0) {
+  //   snake.dy = grid;
+  //   snake.dx = 0;
+
   </script>
 
   <canvas width="400" height="400" id="game"></canvas>
